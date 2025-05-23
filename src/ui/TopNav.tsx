@@ -1,6 +1,7 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
-
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navItems = [
     {
@@ -30,16 +31,23 @@ const navItems = [
 ]
 
 export default function TopNav() {
+    const currentPath = usePathname();
+    
     return (
-        <div className="h-20 bg-white shadow-md text-[#717275]">
-            <div className="container mx-auto h-full grid grid-cols-2  px-24">
+        <div className="h-20 bg-white shadow-md text-[#717275] select-none">
+            <div className="container mx-auto h-full grid grid-cols-2 px-24">
                 <div className="text-2xl font-bold h-full flex items-center">
-                    <img src="/images/mindi-logo.png" alt="" className="w-[160px] h-[36px]"/>
+                    <Image src="/images/mindi-logo.png" alt="" className="w-[160px] h-[36px]" width={160} height={36}/>
                 </div>
                 <nav>
                     <ul className="h-full flex flex-row-reverse items-center gap-4">
                         {navItems.toReversed().map((item) => (
-                            <li key={item.name} className="h-full flex justify-center items-center hover:text-[#5ABFAA] duration-300">
+                            <li 
+                                key={item.name} 
+                                className={`h-full flex justify-center items-center hover:text-[#5ABFAA] duration-300 ${
+                                    currentPath === item.href ? "text-[#5ABFAA]" : ""
+                                }`}
+                            >
                                 <Link href={item.href}>{item.name}</Link>
                             </li>
                         ))}

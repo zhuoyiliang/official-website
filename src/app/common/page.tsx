@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const lines = [
   {
     time: "2015.06",
@@ -55,13 +57,15 @@ export default function Page() {
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
           县域医共体
         </h2>
-        <img
+        <Image
           src="/images/common/image1.png"
           alt=""
           className="h-[45vh] w-full object-cover"
+          width={5120}
+          height={872}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-            <svg
+          <svg
             width={56}
             height={56}
             fill="#ffffff"
@@ -87,7 +91,10 @@ export default function Page() {
       </div>
 
       {lines.map((item) => (
-        <div className="relative w-fit lg:px-56 h-56 grid  grid-cols-[auto_1fr] xl:grid-cols-[1fr_2fr_20rem] grid-rows-1 gap-6 ">
+        <div
+          key={item.time}
+          className="relative w-fit lg:px-56 h-56 grid  grid-cols-[auto_1fr] xl:grid-cols-[1fr_2fr_20rem] grid-rows-1 gap-6 "
+        >
           {/* <div className="box-border absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-gray-400"></div> */}
           {/* <span className="absolute left-1/2 top-4 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-sky-400 opacity-75  animate-ping"></span> */}
           {/* <span className="absolute left-1/2 top-4 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-sky-500"></span> */}
@@ -104,22 +111,28 @@ export default function Page() {
       <div className="bg-[#F1F9FF] py-12">
         <div className="container lg:px-56 h-56 mx-auto ">
           {conetnt2.map((item) => (
-            <p className="indent-8">{item}</p> // 8对应2个中文字符
+            <p key={item} className="indent-8">
+              {item}
+            </p> // 8对应2个中文字符
           ))}
         </div>
 
         <div className="container lg:px-56 py-2 mx-auto grid grid-cols-2">
-          <img
+          <Image
             src="/images/common/image3.png"
             alt=""
             className="rounded-xl  p-6 
               transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+            width={520}
+            height={360}
           />
-          <img
+          <Image
             src="/images/common/image4.png"
             alt=""
             className="rounded-xl  p-6 
               transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+            width={520}
+            height={360}
           />
         </div>
       </div>

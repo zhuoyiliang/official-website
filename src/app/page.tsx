@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 const banners = [
   {
@@ -30,7 +31,7 @@ const banners = [
 export default function App() {
   return (
     <>
-      <div className="h-[70vh] relative">
+      <div className="h-[70vh] relative select-none">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           pagination={{ clickable: true }}
@@ -44,7 +45,7 @@ export default function App() {
         >
           {banners.map((banner) => (
             <SwiperSlide key={banner.id} className="relative">
-              <img src={banner.src} alt={`Banner ${banner.id}`} />
+              <Image src={banner.src} alt={`Banner ${banner.id}`} width={2560 } height={906} />
               <div className="absolute left-[10%] top-1/2 -translate-y-1/2 text-black max-w-[40%]">
                 <h2 className="text-4xl font-bold mb-4">{banner.title}</h2>
                 <p className="text-lg">{banner.desc}</p>
@@ -56,10 +57,11 @@ export default function App() {
 
       <div className="w-[1024px] mx-auto">
         <div className="flex items-center justify-center gap-12">
-          <img
+          <Image
             src="/images/index/image1.png"
             alt=""
             className="h-96 aspect-square"
+            width={960} height={720} 
           />
           <div className="h-full flex justify-around flex-col">
             <h3 className="text-3xl my-6">敏迪医疗卫生综合平台</h3>
@@ -70,10 +72,11 @@ export default function App() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-12 flex-row-reverse">
-          <img
+          <Image
             src="/images/index/image2.png"
-            alt=""
-            className="h-96 aspect-square"
+            alt="" 
+            className="h-96 aspect-square" 
+               width={960} height={720} 
           />
           <div className="h-full flex justify-around flex-col">
             <h3 className="text-3xl my-6">敏迪医疗卫生综合平台</h3>

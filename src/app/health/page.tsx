@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const cards = [
   {
     title: "卫生计生管理部门/卫健部门",
@@ -22,10 +24,11 @@ export default function Page() {
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
           基层卫生健康管理
         </h2>
-        <img
+        <Image
           src="/images/common/image1.png"
           alt=""
           className="h-[45vh] w-full object-cover"
+          width={1024} height={500}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
             <svg
@@ -63,7 +66,8 @@ export default function Page() {
             >
               <div className="text-base font-semibold mb-3 flex">
                 {" "}
-                <img src="/images/common/image2.png" alt="" />
+                <Image src="/images/common/image2.png" alt="" 
+                width={18} height={20}/>
                 {item.title}
               </div>
               <p className="text-gray-500">{item.content}</p>

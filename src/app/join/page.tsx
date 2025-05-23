@@ -1,19 +1,4 @@
-const cards = [
-  {
-    title: "卫生计生管理部门/卫健部门",
-    content:
-      "查询公卫工作指标，监督和考核健康档案各项要求，进一步推进社区基本公共卫生服务项目工作。",
-  },
-  {
-    title: "乡镇卫生院",
-    content: "协助基层医疗卫生机构建档、签约，并及时监督和更新健康档案信息。",
-  },
-  {
-    title: "村卫生站/社区卫生服务中心",
-    content:
-      "基层医疗卫生机构通过系统与居民签约，为签约的居民建档、体检、随访、健教。",
-  },
-];
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -22,10 +7,12 @@ export default function Page() {
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
           加入我们
         </h2>
-        <img
+        <Image
           src="/images/common/image1.png"
           alt=""
           className="h-[45vh] w-full object-cover"
+                  width={5120}
+          height={872}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
           <svg
@@ -50,10 +37,11 @@ export default function Page() {
       </div>
       <div className="container my-28 mx-auto lg:px-56">
         <div className="w-full flex gap-2 items-center">
-          <img
+          <Image
             src="/images/join/image1.png"
             alt=""
             className="rounded-xl p-1"
+          width={620} height={470}
           />
           <div className="">
             <h3 className="text-2xl my-2">人文理念</h3>
@@ -69,10 +57,11 @@ export default function Page() {
         </div>
 
         <div className="w-full flex gap-2 flex-row-reverse items-center">
-          <img
+          <Image
             src="/images/join/image2.png"
             alt=""
             className="rounded-xl p-1"
+                width={540} height={470}
           />
           <div className="">
             <h3 className="text-2xl my-2">人文理念</h3>
