@@ -93,7 +93,7 @@ export default function Page() {
       {lines.map((item) => (
         <div
           key={item.time}
-          className="relative w-fit lg:px-56 h-56 grid  grid-cols-[auto_1fr] xl:grid-cols-[1fr_2fr_20rem] grid-rows-1 gap-6 "
+          className="relative w-fit lg:px-56 h-56 grid  grid-cols-[auto_1fr] lg:xl:grid-cols-[1fr_2fr_10rem] xl:grid-cols-[1fr_2fr_20rem] grid-rows-1 gap-6 "
         >
           {/* <div className="box-border absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-gray-400"></div> */}
           {/* <span className="absolute left-1/2 top-4 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-sky-400 opacity-75  animate-ping"></span> */}

@@ -75,7 +75,7 @@ export default function App() {
               系统进行流程化管理，实现特定的业务功能，提高医疗机构的工作效率和服务质量。
             </p>
           </div>
-        </div>
+        </div>  
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 md:[direction:rtl]">
           <Image
             src="/images/index/image2.png"
