@@ -45,7 +45,12 @@ export default function App() {
         >
           {banners.map((banner) => (
             <SwiperSlide key={banner.id} className="relative">
-              <Image src={banner.src} alt={`Banner ${banner.id}`} width={2560 } height={906} />
+              <Image
+                src={banner.src}
+                alt={`Banner ${banner.id}`}
+                width={2560}
+                height={906}
+              />
               <div className="absolute left-[10%] top-1/2 -translate-y-1/2 text-black max-w-[40%]">
                 <h2 className="text-4xl font-bold mb-4">{banner.title}</h2>
                 <p className="text-lg">{banner.desc}</p>
@@ -55,33 +60,33 @@ export default function App() {
         </Swiper>
       </div>
 
-      <div className="w-[1024px] mx-auto">
-        <div className="flex items-center justify-center gap-12">
+      <div className="max-w-[1024px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
           <Image
             src="/images/index/image1.png"
             alt=""
-            className="h-96 aspect-square"
-            width={960} height={720} 
+            width={960}
+            height={720}
           />
-          <div className="h-full flex justify-around flex-col">
-            <h3 className="text-3xl my-6">敏迪医疗卫生综合平台</h3>
-            <p>
+          <div className="h-full flex  flex-col p-4  justify-center">
+            <h3 className="text-3xl my-4">敏迪医疗卫生综合平台</h3>
+            <p className="indent-8">
               以最新信息技术运用到医疗机构与公共卫生的各项业务系统中，对医疗机构、公共卫生
               系统进行流程化管理，实现特定的业务功能，提高医疗机构的工作效率和服务质量。
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-12 flex-row-reverse">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 md:[direction:rtl]">
           <Image
             src="/images/index/image2.png"
             alt="" 
-            className="h-96 aspect-square" 
-               width={960} height={720} 
+            width={960}
+            height={720}
           />
-          <div className="h-full flex justify-around flex-col">
-            <h3 className="text-3xl my-6">敏迪医疗卫生综合平台</h3>
-            <p>
-             是互联网在医疗领域的新应用，同时覆盖诊前、诊中、诊后各环节，包括问诊咨询、复诊续方、双向转诊、电子健康档案、家庭医生、疾病风险预估、在线健康管理（包括慢病管理）等。
+          <div className="h-full flex flex-col  p-4 [direction:ltr] justify-center">
+            <h3 className="text-3xl my-4">敏迪医疗卫生综合平台</h3>
+            <p className="indent-8">
+              是互联网在医疗领域的新应用，同时覆盖诊前、诊中、诊后各环节，包括问诊咨询、复诊续方、双向转诊、电子健康档案、家庭医生、疾病风险预估、在线健康管理（包括慢病管理）等。
             </p>
           </div>
         </div>

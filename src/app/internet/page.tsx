@@ -6,7 +6,7 @@ const msg2 =
 export default function Page() {
   return (
     <div>
-      <div className="relative mb-24">
+      <div className="relative xl:mb-24">
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
           互联网医院
         </h2>
@@ -38,18 +38,18 @@ export default function Page() {
           </svg>
         </div>
       </div>
-      <div className="container my-12 mx-auto lg:px-56 indent-8">
+      <div className="max-w-[1024px]  xl:my-12 mx-auto   p-4">
         敏迪--互联网医院以实体医院为依托，利用互联网技术对接院内部信息系统，向患者提供基于互联网的线上复诊、就医服务、医患互动、病情管理和疾病诊治等全面的医疗健康互联网服务，打造一个线上线下服务一体化、诊前诊中诊后服务一体化的互联网医院。
       </div>
-      <div className="container my-12 mx-auto lg:px-56 flex items-center gap-4">
+      <div className="max-w-[1024px] mx-auto  mx-auto  flex items-center max-md:flex-wrap">
         <Image
           src="/images/internet/image1.png"
           alt=""
-          className="rounded-xl p-6 transition-all duration-300"
+          className="rounded-xl transition-all duration-300"
           width={480}
           height={420}
         />
-        <p className=" indent-8">{msg2}</p>
+        <p className=" indent-8 p-4">{msg2}</p>
       </div>
     </div>
   );

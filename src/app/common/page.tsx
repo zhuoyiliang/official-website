@@ -86,7 +86,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="my-28 mx-auto w-fit text-3xl  font-sans">
+      <div className="my-12 mx-auto w-fit text-3xl  font-sans">
         医共体大事记
       </div>
 
