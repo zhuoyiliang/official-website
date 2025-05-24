@@ -22,10 +22,10 @@ export default function Footer() {
                 <Link href="/internet">互联网医院</Link>
               </li>
               <li>
-                <Link href="/internet">影像信息共享</Link>
+                <Link href="/">影像信息共享</Link>
               </li>
               <li>
-                <Link href="/internet">第三方社会药房</Link>
+                <Link href="/">第三方社会药房</Link>
               </li>
             </ul>
           </div>
