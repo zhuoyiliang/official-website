@@ -29,6 +29,8 @@ const banners = [
 ];
 
 export default function App() {
+  console.log(process.env.NODE_ENV, "log");
+  console.error(process.env.NODE_ENV, "error");
   return (
     <>
       <div className="h-[70vh] relative select-none">
