@@ -58,11 +58,11 @@ export default function Page() {
 
       <div className="bg-[#F1F9FF]">
         <h3 className="text-2xl mx-auto w-fit pt-12">不同部门协作</h3>
-        <div className="container 2xl:px-56 mx-auto py-12  grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+        <div className="container 2xl:px-56 mx-auto py-12  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
           {cards.map((item) => (
             <div
               key={item.title}
-              className="w-full aspect-video rounded-xl bg-white p-6 
+              className="w-full lg:aspect-video rounded-xl bg-white p-6 
               transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
             >
               <div className="text-base font-semibold mb-3 flex flex-wrap">
