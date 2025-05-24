@@ -122,7 +122,7 @@ export default function Page() {
     <div>
       <div className="relative mb-24">
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
-          县域医共体
+          区/县域医共体
         </h2>
         <Image
           src="/images/common/image1.png"

@@ -16,7 +16,7 @@ export default function Footer() {
                 <Link href="/common">县域医共体</Link>
               </li>
               <li>
-                <Link href="/health">基层卫生健康管理</Link>
+                <Link href="/health">智能公卫升级</Link>
               </li>
               <li>
                 <Link href="/internet">互联网医院</Link>

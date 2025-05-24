@@ -20,18 +20,19 @@ const cards = [
 export default function Page() {
   return (
     <div>
-      <div className="relative xl:mb-24">
+      <div className="relative xl:mb-12">
         <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
-          基层卫生健康管理
+          智能公卫升级
         </h2>
         <Image
           src="/images/common/image1.png"
           alt=""
           className="h-[45vh] w-full object-cover"
-          width={1024} height={500}
+          width={1024}
+          height={500}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-            <svg
+          <svg
             width={56}
             height={56}
             fill="#ffffff"
@@ -52,8 +53,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="container xl:my-12 mx-auto xl:px-56 p-4">
-        敏迪--基层卫生健康管理平台，以居民档案为核心，严格按照《国家基本公共卫生服务规范（第三版）》设计，基本内容包括居民健康档案、老年人健康管理、高血压患者管理、糖尿病患者管理、儿童健康管理、孕产妇管理、中医药管理、健康教育、家庭医生签约等。系统根据基层医疗机构需求，同时具备居民主动到院/站，或基层公卫人员下乡服务功能，包括建档、签约、体检、随访、健康教育、重点人群筛查等，并可对接省妇幼系统、省疫苗系统、省精防系统，院内打通HIS、LIS、PACS、EMR，实现与临床、检验检查数据互联互通，保证动态健康档案管理率，极大程度上避免了以前公卫工作的重复、繁杂。
+      <div className="container xl:my-12 mx-auto xl:px-56 p-4 indent-8">
+        以“智能机器人+公卫系统”为核心，严格按照《国家基本公共卫生服务规范（第三版）》，为县域基层医疗机构打造高效公卫解决方案。通过机器人替代卫生院及村站重复性人力操作，实现自动化处理居民健康随访、数据多端协同与智能质控，精准破解基层公卫“数据不准、人力不足、效率低下”难题。产品以“低门槛交互+高精度协作”为特色，支持智能纠错、智能提醒及跨平台联动，在确保服务规范的同时，大幅减少人为操作负荷，推动公卫人员从“事务性消耗”转向慢性病管理、健康干预等核心服务，助力县域实现“数据更准、响应更快、服务更专”的公卫升级目标。
       </div>
 
       <div className="bg-[#F1F9FF]">
@@ -66,8 +67,12 @@ export default function Page() {
               transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
             >
               <div className="text-base font-semibold mb-3 flex flex-wrap">
-                <Image src="/images/common/image2.png" alt="" 
-                width={18} height={20}/>
+                <Image
+                  src="/images/common/image2.png"
+                  alt=""
+                  width={18}
+                  height={20}
+                />
                 {item.title}
               </div>
               <p className="text-gray-500">{item.content}</p>

@@ -10,11 +10,11 @@ const navItems = [
     href: "/",
   },
   {
-    name: "县域医共体",
+    name: "区/县域医共体",
     href: "/common",
   },
   {
-    name: "基层卫生健康管理",
+    name: "智能公卫升级",
     href: "/health",
   },
   {
@@ -57,18 +57,17 @@ export default function TopNav() {
         <nav className=" hidden md:block">
           <ul className="h-full flex items-center gap-4">
             {navItems.map((item) => (
-              <li
-                key={item.name}
-                className={`h-full flex justify-center items-center hover:text-[#5ABFAA] duration-300 ${
-                  currentPath === item.href ? "text-[#5ABFAA]" : ""
-                }`}
-              >
-                <Link href={item.href} className="h-full">
+              <Link key={item.name} href={item.href} className="h-full">
+                <li
+                  className={`h-full flex justify-center items-center hover:text-[#5ABFAA] duration-300 ${
+                    currentPath === item.href ? "text-[#5ABFAA]" : ""
+                  }`}
+                >
                   <Button1 status={currentPath === item.href}>
                     {item.name}
                   </Button1>
-                </Link>
-              </li>
+                </li>
+              </Link>
             ))}
           </ul>
         </nav>
@@ -85,7 +84,7 @@ const Button1 = ({
   status: boolean;
 }) => {
   return (
-    <button className="h-full text-center relative  transition-all duration-300 ease-in group">
+    <button className="h-full text-center relative  transition-all duration-300 ease-in group cursor-pointer">
       {children}
       <span
         className={clsx(
