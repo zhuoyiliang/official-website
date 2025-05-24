@@ -21,6 +21,14 @@ const navItems = [
     name: "互联网医院",
     href: "/internet",
   },
+  // {
+  //   name: "影像信息共享",
+  //   href: "/",
+  // },
+  // {
+  //   name: "第三方社会药房",
+  //   href: "/join",
+  // },
   {
     name: "关于我们",
     href: "/about",
@@ -36,7 +44,7 @@ export default function TopNav() {
 
   return (
     <div className="h-20 bg-white shadow-md text-[#717275] select-none">
-      <div className="w-full container mx-auto h-full grid grid-cols-[auto_1fr] lg:px-16 xl:px-32">
+      <div className="w-full container mx-auto h-full flex justify-between lg:px-16 xl:px-32">
         <div className="h-full flex items-center px-2">
           <Image
             src="/images/mindi-logo.png"
@@ -47,8 +55,8 @@ export default function TopNav() {
           />
         </div>
         <nav className=" hidden md:block">
-          <ul className="h-full flex flex-row-reverse items-center gap-4">
-            {navItems.toReversed().map((item) => (
+          <ul className="h-full flex items-center gap-4">
+            {navItems.map((item) => (
               <li
                 key={item.name}
                 className={`h-full flex justify-center items-center hover:text-[#5ABFAA] duration-300 ${
@@ -56,7 +64,9 @@ export default function TopNav() {
                 }`}
               >
                 <Link href={item.href} className="h-full">
-                  <Button1 status={currentPath === item.href}>{item.name}</Button1>
+                  <Button1 status={currentPath === item.href}>
+                    {item.name}
+                  </Button1>
                 </Link>
               </li>
             ))}

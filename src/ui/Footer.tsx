@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="bg-[#001529] min-h-96 text-gray-300  grid grid-rows-[1fr_4rem] select-none">
-      <div className="container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-0 lg:px-24 max-md:px-12">
+      <div className="container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-0 lg:px-24 max-md:px-12">
         <div className="h-full flex items-center">
           <div className="w-fit m-4">
             <h3 className="text-2xl  text-gray-300 my-4">网站导航</h3>
@@ -21,6 +21,12 @@ export default function Footer() {
               <li>
                 <Link href="/internet">互联网医院</Link>
               </li>
+              <li>
+                <Link href="/internet">影像信息共享</Link>
+              </li>
+              <li>
+                <Link href="/internet">第三方社会药房</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -33,7 +39,7 @@ export default function Footer() {
                 *:hover:text-blue-300 *:transition-all *:duration-300 *:cursor-pointer"
             >
               <li>
-                <Link href="/common">邮箱：hr_mindimed@163.com</Link>
+                <Link href="/common">邮箱：info@mindined.com</Link>
               </li>
               <li>
                 <Link href="/health">座机：(020)80927180</Link>
@@ -44,20 +50,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        <div className="h-full flex items-center">
-          <div className="w-fit  m-4">
-            <h3 className="text-2xl  text-gray-300 my-4">扫码关注公众号</h3>
-            <Image
-              src="/images/gzh.png"
-              alt=""
-              className="h-full object-contain max-md:pl-4"
-              width={120}
-              height={120}
-            />
-          </div>
-        </div>
-
         <div className="h-full flex  items-center">
           <div className="w-fit  m-4">
             <h3 className="text-2xl  text-gray-300 my-4">扫码咨询</h3>
