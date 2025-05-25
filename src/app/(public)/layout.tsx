@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "敏迪医疗",
   description: "",
 };
+
+import TopNav  from "@/ui/TopNav"
+import Footer from "@/ui/Footer";
 
 export default function RootLayout({
   children,
@@ -16,7 +19,15 @@ export default function RootLayout({
       <body
         className={`antialiased relative`}
       >
-        {children}
+          <div className="sticky top-0 left-0 right-0 z-20">
+            <TopNav />
+          </div>
+          <div className="min-h-screen">
+            {children}
+          </div>
+          <div>
+            <Footer />
+          </div>
       </body>
     </html>
   );

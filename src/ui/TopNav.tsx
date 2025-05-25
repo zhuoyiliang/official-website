@@ -7,7 +7,7 @@ import clsx from "clsx";
 const navItems = [
   {
     name: "首页",
-    href: "/",
+    href: "/home",
   },
   {
     name: "区/县域医共体",
