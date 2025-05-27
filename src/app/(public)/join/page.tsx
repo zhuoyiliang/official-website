@@ -4,9 +4,9 @@ export default function Page() {
   return (
     <div>
       <div className="relative mb-24">
-        <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
+        <h1 className="select-none text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[65px] mb-4 text-start absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black  z-10">
           加入我们
-        </h2>
+        </h1>
         <Image
           src="/images/common/image1.png"
           alt=""
@@ -47,8 +47,8 @@ export default function Page() {
           <div className="p-4 flex flex-col justify-center">
             <h3 className="text-2xl my-2">人文理念</h3>
             <p className="indent-8">
-              一、家庭文化:
-              公司建立以家庭为基础的文化，促进员工之间的沟通和交流，营造家庭般的温馨氛围，强化员工的团队合作意识和责任心。
+              一、公司文化:
+              公司促进员工之间的沟通和交流，营造家庭般的温馨氛围，强化员工的团队合作意识和责任心。
             </p>
             <p className="indent-8">
               二、尊重人的价值，开发人的潜能:

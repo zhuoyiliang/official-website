@@ -1,60 +1,22 @@
-import Image from "next/image";
-
+import TileImg from "@/ui/TitleImg";
 const msg1 =
-  "广州敏迪医疗科技有限公司，专注于紧密型县域医共体信息化建设和公卫服务升级，旨在解决各级医疗机构之间所存在的“信息孤岛”，解决居民看病“最后一公里”等难题；采用最新技术将区域内县-镇-村所有医疗机构之间的信息互联互通，全面推动卫健部门与医疗机构的业务信息平台升级；助力提高各级医疗机构运营效率，优化医疗资源配置，改善群众就医体验，让群众看病更省心。公卫升级是指将智能机器人融入到公卫系统中，从而提高基层公卫人员工作效率和基层数据的准确率。\n敏迪医疗根据国家卫生健康委《关于印发紧密型县域医共体信息化功能指引的通知》这份文件来开发并完善相应功能板块，目前已有25个相关软著；2023年在汕头市南澳县的县域医共体信息化建设入选国家卫生健康委办公厅的“紧密型县域医共体工作专刊（第3期）”。我们汇聚了临床医学、医学影像、公共卫生等领域的资深医疗专家团队，成员兼具深厚的行业经验与前沿技术视野，深刻理解县域医共体协同诊疗、公卫服务升级及基层医疗场景的核心需求。基于对医疗业务流程的精准把控和对政策导向的前瞻洞察，打造出“实用+创新”的医共体解决方案。产品以“提升基层服务效率、强化医防协同能力”为目标，通过模块化设计、智能化工具与数据互联互通，助力县域医疗实现“少花钱、快落地、真见效”的数字化转型。";
+  "广州敏迪医疗科技有限公司，专注于紧密型县域医共体信息化建设和公卫服务升级，旨在解决各级医疗机构之间所存在的“信息孤岛”，解决居民看病“最后一公里”等难题；采用最新技术将区域内县-镇-村所有医疗机构之间的信息互联互通，全面推动卫健部门与医疗机构的业务信息平台升级；助力提高各级医疗机构运营效率，优化医疗资源配置，改善群众就医体验，让群众看病更省心。公卫升级是指将智能机器人融入到公卫系统中，从而提高基层公卫人员工作效率和基层数据的准确率。\n敏迪医疗根据国家卫生健康委《关于印发紧密型县域医共体信息化功能指引的通知》这份文件来开发并完善相应功能板块，目前已有25个相关软著；2023年在汕头市南澳县的县域医共体信息化建设入选国家卫生健康委办公厅的“紧密型县域医共体工作专刊（第3期）”。\n我们汇聚了临床医学、医学影像、公共卫生等领域的资深医疗专家团队，成员兼具深厚的行业经验与前沿技术视野，深刻理解县域医共体协同诊疗、公卫服务升级及基层医疗场景的核心需求。基于对医疗业务流程的精准把控和对政策导向的前瞻洞察，打造出“实用+创新”的医共体解决方案。产品以“提升基层服务效率、强化医防协同能力”为目标，通过模块化设计、智能化工具与数据互联互通，助力县域医疗实现“少花钱、快落地、真见效”的数字化转型。";
 
 export default function Page() {
   return (
     <div>
-      <div className="relative mb-24">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold z-10">
-          广州敏迪医疗科技有限公司
-          <p className="text-xl text-gray-500 ">专注于智慧医疗信息化</p>
-        </div>
-        <Image
-          src="/images/common/image1.png"
-          alt=""
-          className="h-[45vh] w-full object-cover"
-          width={5120}
-          height={872}
-        />
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <svg
-            width={56}
-            height={56}
-            fill="#ffffff"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#c7c6c6"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"></path>
-            </g>
-          </svg>
-        </div>
-      </div>
+      <TileImg
+        title="广州敏迪医疗科技有限公司"
+        subTitle="专注于区域医疗信息整合"
+        imgSrc="/images/common/image1.png"
+      />
       <div className="container my-12 mx-auto lg:px-56 indent-8">
         <h3 className="text-2xl indent-0 my-2 font-semibold">公司简介</h3>
         {msg1.split("\n").map((item, index) => (
-          <p key={index} className="indent-8">
+          <p key={index} className="indent-8 mb-4 leading-6 text-xl">
             {item}
           </p>
         ))}
-      </div>
-      <div className="mt-12 h-[600px]">
-        <Image
-          src="/images/about/image1.png"
-          className="w-full h-full object-cover"
-          alt="示例"
-          width={5120}
-          height={940}
-        />
       </div>
     </div>
   );

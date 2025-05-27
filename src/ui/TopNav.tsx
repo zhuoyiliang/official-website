@@ -10,21 +10,21 @@ const navItems = [
     href: "/home",
   },
   {
-    name: "区/县域医共体",
+    name: "县域医共体",
     href: "/common",
   },
   {
-    name: "智能公卫升级",
-    href: "/health",
+    name: "影像信息共享",
+    href: "/video",
   },
   {
     name: "互联网医院",
     href: "/internet",
   },
-  // {
-  //   name: "影像信息共享",
-  //   href: "/",
-  // },
+  {
+    name: "智能公卫升级",
+    href: "/health",
+  },
   // {
   //   name: "第三方社会药房",
   //   href: "/join",
@@ -54,7 +54,7 @@ export default function TopNav() {
             height={36}
           />
         </div>
-        <nav className=" hidden md:block">
+        <nav className=" md:block w-max-[768px]">
           <ul className="h-full flex items-center gap-4">
             {navItems.map((item) => (
               <Link key={item.name} href={item.href} className="h-full">
