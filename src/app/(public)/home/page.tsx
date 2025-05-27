@@ -59,7 +59,6 @@ export default function App() {
                   <h1
                     key={index}
                     className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[65px] mb-4 text-start"
-                    style={{ fontFamily: "AlibabaPuHuiTi-3-55-RegularL3" }}
                   >
                     {line}
                   </h1>
