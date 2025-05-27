@@ -39,10 +39,10 @@ export default function App() {
           pagination={{ clickable: true }}
           navigation={true}
           loop={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           className="mySwiper"
         >
           {banners.map((banner) => (
