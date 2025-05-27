@@ -10,7 +10,7 @@ export default function Page() {
         subTitle="专注于区域医疗信息整合"
         imgSrc="/images/common/image1.png"
       />
-      <div className="container my-12 mx-auto lg:px-56 indent-8">
+      <div className="container my-12 mx-auto lg:px-48 md:px-24 sm:px-16 px-8 indent-8">
         <h3 className="text-2xl indent-0 my-2 font-semibold">公司简介</h3>
         {msg1.split("\n").map((item, index) => (
           <p key={index} className="indent-8 mb-4 leading-6 text-xl">

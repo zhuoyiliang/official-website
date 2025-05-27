@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { useState } from "react";
 
 const navItems = [
   {
@@ -41,9 +42,10 @@ const navItems = [
 
 export default function TopNav() {
   const currentPath = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="h-20 bg-white shadow-md text-[#717275] select-none">
+    <div className="h-20 bg-white shadow-md text-[#717275] select-none relative">
       <div className="w-full container mx-auto h-full flex justify-between lg:px-16 xl:px-32">
         <div className="h-full flex items-center px-2">
           <Image
@@ -54,7 +56,36 @@ export default function TopNav() {
             height={36}
           />
         </div>
-        <nav className=" md:block w-max-[768px]">
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden flex items-center px-3"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg 
+            className="w-6 h-6" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            {isMenuOpen ? (
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+        {/* Desktop navigation */}
+        <nav className="hidden md:block">
           <ul className="h-full flex items-center gap-4">
             {navItems.map((item) => (
               <Link key={item.name} href={item.href} className="h-full">
@@ -71,6 +102,25 @@ export default function TopNav() {
             ))}
           </ul>
         </nav>
+        {/* Mobile navigation */}
+        {isMenuOpen && (
+          <div className="absolute top-20 left-0 right-0 bg-white shadow-lg md:hidden">
+            <ul className="py-2">
+              {navItems.map((item) => (
+                <Link key={item.name} href={item.href}>
+                  <li
+                    className={` px-4 py-2 hover:bg-gray-100 text-center active:bg-[#5ABFAA] active:text-white transition-all duration-300 ${
+                      currentPath === item.href ? "text-[#5ABFAA]" : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

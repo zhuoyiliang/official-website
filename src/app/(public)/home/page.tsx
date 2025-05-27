@@ -53,7 +53,7 @@ export default function App() {
                 width={2560}
                 height={906}
               />
-              <div className="absolute left-[5%] right-[40%] bottom-0 top-1/2 -translate-y-1/2 text-black flex flex-col justify-center">
+              <div className="absolute left-[10%] lg:left-[5%] right-[40%] bottom-0 top-1/2 -translate-y-1/2 text-black flex flex-col justify-center">
                 <div className="w-fit">
                 {banner.title.split("\n").map((line, index) => (
                   <h1

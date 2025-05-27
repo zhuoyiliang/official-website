@@ -72,7 +72,7 @@ export default function Page() {
           {cards.map((item) => (
             <div
               key={item.title}
-              className="w-full lg:aspect-video rounded-xl bg-white p-6 
+              className="w-full rounded-xl bg-white p-6 
               transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
             >
               <div className="font-semibold mb-3 h-full flex flex-col flex-wrap justify-center items-center gap-4 text-2xl lg:text-xl">

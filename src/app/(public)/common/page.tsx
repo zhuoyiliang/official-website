@@ -134,16 +134,17 @@ export default function Page() {
       {lines.map((item) => (
         <div
           key={item.time}
-          className="relative w-full lg:px-56 min-h-fit grid  grid-cols-[1fr_2fr] grid-rows-1 gap-8"
+          className="relative w-full lg:px-48 min-h-fit grid grid-cols-[2rem_1fr] md:grid-cols-[1fr_2fr] grid-rows-1 gap-8"
         >
           <div className="flex flex-row-reverse text-3xl font-sans relative px-6">
-            {item.time}
+            <span className="hidden md:block">{item.time}</span>
             <div className="box-border absolute left-full transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-gray-400"></div>
             <span className="absolute left-full top-4 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-sky-400 opacity-75  animate-ping"></span>
             <span className="absolute left-full top-4 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-sky-500"></span>
           </div>
 
           <div className="leading-8 mx-4">
+            <span className="text-2xl font-semibold md:hidden">{item.time}</span>
             {Array.isArray(item.content) ? (
               item.content.map((str, index) => (
                 <span
@@ -166,7 +167,7 @@ export default function Page() {
       ))}
 
       <div className="bg-[#F1F9FF] py-12">
-        <div className="container md:text-1xl font-semibold  mx-auto ">
+        <div className="container md:text-1xl font-semibold mx-auto max-md:px-4">
           {conetnt2.map((item) => (
             <p key={item} className="indent-8 mt-4">
               {item}
@@ -174,7 +175,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="container px-0 lg:px-32 py-2 mx-auto grid grid-cols-3">
+        <div className="container px-0 lg:px-32 py-2 mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           <div className="flex flex-col justify-center items-center">
             <Image
               src="/images/common/image3.png"
