@@ -36,7 +36,7 @@ export default function Page() {
         </div>
       </div>
       <div className="max-w-[1024px] my-12 mx-auto  ">
-        <div className="w-full  grid grid-cols-2 max-md:grid-cols-1">
+        <div className="w-full  grid md:grid-cols-2 grid-cols-1">
           <Image
             src="/images/join/image1.png"
             alt=""
@@ -57,7 +57,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-2 max-md:grid-cols-1 md:[direction:rtl]">
+        <div className="w-full grid md:grid-cols-2 grid-cols-1 md:[direction:rtl]">
           <Image
             src="/images/join/image2.png"
             alt=""

@@ -32,7 +32,7 @@ export default function Page() {
       <div className="max-w-[1024px] xl:my-12 mx-auto p-4 indent-8 text-2xl">
         互联网医院以实体医院为依托，利用互联网技术对接医院内部信息系统，可将电子处方流转到第三方社会药房，打造一个线上线下服务一体化、诊前诊中诊后服务一体化的互联网医院。
       </div>
-      <div className="max-w-[1248px] mx-auto  flex items-center max-md:flex-wrap">
+      <div className="max-w-[1248px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <Image
           src="/images/internet/image1.png"
           alt=""
@@ -40,34 +40,10 @@ export default function Page() {
           width={480}
           height={420}
         />
-        <p className=" indent-8 p-4 text-xl">{msg2}</p>
+        <p className="indent-8 p-4 text-xl">{msg2}</p>
       </div>
 
       <div className="bg-[#F1F9FF]">
-        {/* <div className="container 2xl:px-48 xl:px-24 lg:px-8 px-0 mx-auto py-12  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  lg:gap-16  md:gap-8 gap-4">
-          {cards.map((item) => (
-            <div
-              key={item.title}
-              className="w-full md:aspect-video rounded-xl bg-white p-6
-              transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
-            >
-              <div className="font-semibold lg:mb-3 h-full flex flex-col flex-wrap items-center gap-4 text-xl">
-                <Image
-                  src="/images/common/image2.png"
-                  alt=""
-                  width={18}
-                  height={20}
-                />
-                {item.title.split("\n").map((line, index) => (
-                  <span key={line}>{line}
-                    {index !== item.title.split("\n").length - 1 && <br />}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div> */}
-
         <div className="container 2xl:px-64 xl:px-48 md:px-16 px-0 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 md:gap-8 gap-4">
           {cards.map((item) => (
             <div
