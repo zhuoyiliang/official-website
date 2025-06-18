@@ -58,7 +58,7 @@ export default function TopNav() {
         </div>
         {/* Mobile menu button */}
         <button 
-          className="md:hidden flex items-center px-3"
+          className="lg:hidden flex items-center px-3"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg 
@@ -85,7 +85,7 @@ export default function TopNav() {
           </svg>
         </button>
         {/* Desktop navigation */}
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="h-full flex items-center gap-4">
             {navItems.map((item) => (
               <Link key={item.name} href={item.href} className="h-full">
@@ -104,7 +104,7 @@ export default function TopNav() {
         </nav>
         {/* Mobile navigation */}
         {isMenuOpen && (
-          <div className="absolute top-20 left-0 right-0 bg-white shadow-lg md:hidden">
+          <div className="absolute top-20 left-0 right-0 bg-white shadow-lg lg:hidden">
             <ul className="py-2">
               {navItems.map((item) => (
                 <Link key={item.name} href={item.href}>

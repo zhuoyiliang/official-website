@@ -139,8 +139,7 @@ export default function Page() {
           <div className="flex flex-row-reverse text-3xl font-sans relative px-6">
             <span className="hidden md:block">{item.time}</span>
             <div className="box-border absolute left-full transform -translate-x-1/2 w-0.5 h-full border-l border-dashed border-gray-400"></div>
-            <span className="absolute left-full top-4 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-sky-400 opacity-75  animate-ping"></span>
-            <span className="absolute left-full top-4 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-sky-500"></span>
+            <span className="absolute left-full top-4 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-sky-500"></span>
           </div>
 
           <div className="leading-8 mx-4">

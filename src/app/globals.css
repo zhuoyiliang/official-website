@@ -1,4 +1,5 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+@unocss all;
 
 @font-face {
   font-family: 'Metropolis';
