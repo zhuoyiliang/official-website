@@ -143,7 +143,9 @@ export default function Page() {
           </div>
 
           <div className="leading-8 mx-4">
-            <span className="text-2xl font-semibold md:hidden">{item.time}</span>
+            <span className="text-2xl font-semibold md:hidden">
+              {item.time}
+            </span>
             {Array.isArray(item.content) ? (
               item.content.map((str, index) => (
                 <span

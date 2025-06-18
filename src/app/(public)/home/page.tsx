@@ -10,13 +10,13 @@ import Image from "next/image";
 const banners = [
   {
     id: 0,
-    src: "/images/banner1.png",
+    src: "/images/bannerNew1.png",
     title: "聚焦深耕紧密型\n县域医共体信息化建设",
     desc: "根植县域，赋能医共体",
   },
   {
     id: 1,
-    src: "/images/banner0.png",
+    src: "/images/bannerNew0.png",
     title: "数据互联互通\n信息共享",
     desc: "",
   },
@@ -53,7 +53,7 @@ export default function App() {
                 width={2560}
                 height={906}
               />
-              <div className="absolute left-[10%] lg:left-[5%] right-[40%] bottom-0 top-1/2 -translate-y-1/2 text-black flex flex-col justify-center">
+              <div className="absolute left-[10%] lg:left-[5%] right-[10%] md:right-[40%] bottom-0 top-1/2 -translate-y-1/2 text-black flex flex-col justify-center">
                 <div className="w-fit">
                 {banner.title.split("\n").map((line, index) => (
                   <h1
@@ -105,7 +105,7 @@ export default function App() {
           <div className="h-full flex flex-col  p-4 [direction:ltr] justify-center">
             <h3 className="text-3xl my-4">医共体信息化平台</h3>
             <p className="indent-8 text-lg">
-              可实现“县-镇-村”三级医疗机构之间信息互联互通，医共体内检验检查结果互认影像信息共享，双向转诊，分级诊疗，慢病管理，电子处方流转到第三方药房数据统计，总物资管理，设备管理等功能。{" "}
+              可实现“县-镇-村”三级医疗机构之间信息互联互通，医共体内检验检查结果互认, 影像信息共享，双向转诊，分级诊疗，慢病管理，电子处方流转到第三方药房数据统计，总物资管理，设备管理等功能。{" "}
             </p>
           </div>
         </div>
